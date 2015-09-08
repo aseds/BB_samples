@@ -1,16 +1,20 @@
 // (function() {
 
-	var Rectangle = Backbone.Model.extend({});
+	var Rectangle = Backbone.Model.extend({
+		defaults: {
+			item_id: this.cid
+		}
+	});
 
 	var RectangleView = Backbone.View.extend({
 		tagName: 'div',
 		className: 'rectangle',
-		id: this.model.get('item_id'),
-		
+
 		events: {
 			'click': 'move'
 		},
 		render: function(){
+			console.log(this.model.cid);
 			this.setDimensions();
 			this.setPosition();
 			this.setColor();
