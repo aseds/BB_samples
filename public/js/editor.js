@@ -9,12 +9,12 @@
 	var RectangleView = Backbone.View.extend({
 		tagName: 'div',
 		className: 'rectangle',
+		id: function() {return this.model.cid},
 
 		events: {
 			'click': 'move'
 		},
 		render: function(){
-			console.log(this.model.cid);
 			this.setDimensions();
 			this.setPosition();
 			this.setColor();
