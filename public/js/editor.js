@@ -1,17 +1,15 @@
 // (function() {
 
-// put a few more rectangles by creating more Rectangle 
-
 	var Rectangle = Backbone.Model.extend({});
 
 	var RectangleView = Backbone.View.extend({
 		tagName: 'div',
 		className: 'rectangle',
+		id: this.model.get('item_id'),
 		
 		events: {
 			'click': 'move'
 		},
-
 		render: function(){
 			this.setDimensions();
 			this.setPosition();
@@ -48,6 +46,7 @@
 			y: 150
 		},
 		color: 'tomato',
+		item_id: 1
 	}
 	var props2 = {
 		width: 200,
@@ -57,6 +56,7 @@
 			y: 100
 		},
 		color: 'grey',
+		item_id: 2
 	}
 	var props3 = {
 		width: 140,
@@ -66,6 +66,7 @@
 			y: 300
 		},
 		color: 'blue',
+		item_id: 3
 	}
 
 	var models = [
