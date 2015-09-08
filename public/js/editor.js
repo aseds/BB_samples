@@ -8,6 +8,7 @@
 		render: function(){
 			this.setDimensions();
 			this.setPosition();
+			this.setColor();
 			return this;
 		},
 		setPosition: function() {
@@ -22,6 +23,9 @@
 				width: this.model.get('width') + 'px',
 				height: this.model.get('height') + 'px'
 			});
+		},
+		setColor: function() {
+			this.$el.css('background-color', this.model.get('color'));
 		}
 
 	});
@@ -32,7 +36,8 @@
 		position: {
 			x: 300,
 			y: 150
-		}
+		},
+		color: 'tomato',
 	}
 
 	var props2 = {
@@ -41,7 +46,8 @@
 		position: {
 			x: 100,
 			y: 100
-		}
+		},
+		color: 'grey',
 	}
 
 	var myRectangle1 = new Rectangle(props1);
