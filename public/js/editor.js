@@ -5,6 +5,10 @@
 		tagName: 'div',
 		className: 'rectangle',
 		
+		events: {
+			'click': 'move'
+		},
+
 		render: function(){
 			this.setDimensions();
 			this.setPosition();
@@ -26,6 +30,9 @@
 		},
 		setColor: function() {
 			this.$el.css('background-color', this.model.get('color'));
+		},
+		move: function() {
+			this.$el.css('left', this.$el.position().left + 10);
 		}
 
 	});
