@@ -1,4 +1,7 @@
 // (function() {
+
+// put a few more rectangles by creating more Rectangle 
+
 	var Rectangle = Backbone.Model.extend({});
 
 	var RectangleView = Backbone.View.extend({
@@ -46,7 +49,6 @@
 		},
 		color: 'tomato',
 	}
-
 	var props2 = {
 		width: 200,
 		height: 20,
@@ -56,19 +58,27 @@
 		},
 		color: 'grey',
 	}
+	var props3 = {
+		width: 140,
+		height: 160,
+		position: {
+			x: 200,
+			y: 300
+		},
+		color: 'blue',
+	}
 
-	var myRectangle1 = new Rectangle(props1);
-	var myRectangle2 = new Rectangle(props2);
+	var models = [
+		new Rectangle(props1),
+		new Rectangle(props2),
+		new Rectangle(props3)
+	];
 
-	var myView1 = new RectangleView({model: myRectangle1});
-	var myView2 = new RectangleView({model: myRectangle2});
-
-	var myRenderedElement1 = myView1.render().el;
-	var myRenderedElement2 = myView2.render().el;
-
-	$('#canvas').append(myRenderedElement1);
-	$('#canvas').append(myRenderedElement2);
-
+	_(models).each(function(model) {
+		var myView = new RectangleView({model: model});
+		var myRenderedElement = myView.render().el;
+		$('#canvas').append(myRenderedElement)
+	});
 
 
 
