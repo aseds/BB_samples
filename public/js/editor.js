@@ -49,8 +49,7 @@
 			x: 300,
 			y: 150
 		},
-		color: 'tomato',
-		item_id: 1
+		color: 'tomato'
 	}
 	var props2 = {
 		width: 200,
