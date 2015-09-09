@@ -1,9 +1,9 @@
 // (function() {
 
 	var Rectangle = Backbone.Model.extend({
-		defaults: {
-			item_id: this.cid
-		}
+		initialize: function() {
+			this.item_id = this.cid
+		},
 	});
 
 	var RectangleView = Backbone.View.extend({
