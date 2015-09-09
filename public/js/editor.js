@@ -2,7 +2,7 @@
 
 	var Rectangle = Backbone.Model.extend({
 		initialize: function() {
-			this.item_id = this.cid
+			this.set('item_id', this.cid);
 		},
 	});
 
