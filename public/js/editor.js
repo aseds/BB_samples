@@ -2,6 +2,7 @@
 
 	var Rectangle = Backbone.Model.extend({
 		initialize: function() {
+			console.log(JSON.stringify( this.toJSON() ));
 			this.set('item_id', this.cid);
 		},
 	});
