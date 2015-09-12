@@ -13,7 +13,7 @@ var a = new A({
 	two: '2'
 });
 
-console.log(a.asString());
+// console.log(a.asString());
 
 var B = A.extend({});
 
@@ -21,4 +21,9 @@ var b = new B({
 	three: '3'
 });
 
-console.log(b.asString());
+// console.log(b.asString());
+
+console.log(b instanceof B);
+console.log(b instanceof A);
+console.log(b instanceof Backbone.Model);
+console.log(a instanceof B);
