@@ -14,3 +14,11 @@ var a = new A({
 });
 
 console.log(a.asString());
+
+var B = A.extend({});
+
+var b = new B({
+	three: '3'
+});
+
+console.log(b.asString());
