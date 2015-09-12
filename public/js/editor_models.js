@@ -21,3 +21,6 @@ v.set({
 
 v.dump()
 // >> {"type":"car","color":"blue","description""<script>alert("script injection");</script>","weight":1750}
+
+
+$('body').append(v.get('description'));
