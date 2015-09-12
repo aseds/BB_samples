@@ -1,7 +1,9 @@
-var Vehicle = Backbone.Model.extend({}, // the first {} is for properties, the second {} is for class properties
-	{
-		summary: function() { return 'Vehicles are for traveling';}
-	}
-);
+var model = new Backbone.Model();
 
-console.log(Vehicle.summary());
+var Vehicle = Backbone.Model.extend({
+	initialize: function() {
+		console.log('vehicle created');
+	}
+});
+
+var car = new Vehicle();
