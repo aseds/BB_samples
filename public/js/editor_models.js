@@ -1,9 +1,16 @@
-var model = new Backbone.Model();
-
-var Vehicle = Backbone.Model.extend({
+var A = Backbone.Model.extend({
 	initialize: function() {
-		console.log('vehicle created');
+		console.log('initialize A');
+	},
+
+	asString: function () {
+		return JSON.stringify(this.toJSON());
 	}
 });
 
-var car = new Vehicle();
+var a = new A({
+	one: '1',
+	two: '2'
+});
+
+console.log(a.asString());
